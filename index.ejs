@@ -1,0 +1,25 @@
+<!Doctype html>
+<link rel="stylesheet" href="index.css" type="text/css">
+<body>
+<div class="left">
+<% for(var i=0;i<380;i++){ %>
+	<a href="javascript:;" id=<%= i%> ><%= i%>.html </a>
+	<% }%>
+</div>
+<div class="right">
+
+<iframe src="weibo/0.html"  width="100%" height="100%" ></iframe>
+</div>
+
+<script>
+window.onload=function(){
+	document.onclick=function(e){
+		var target=Number(e.target.id);
+		var right=document.querySelector('.right');
+		right.innerHTML='<iframe src="weibo/'+target+'.html"  width="100%" height="100%" ></iframe>'
+	}
+}
+</script>
+</body>
+
+/*
